@@ -75,7 +75,7 @@ const send = () => {
         // formatted :: [String]
         const formatted = object.map(x => {
             const joined = x.item.map(t => `&lt;${t}&gt;`).join('');
-            return `<li>= ${joined}<sub>(${x.base})</sub></li>`;
+            return `<li>= ${joined}<sub>${x.base}</sub></li>`;
         });
         element.innerHTML = `${num}<ul>${formatted.join('')}</ul>`;
         dgebi('result').appendChild(element);
