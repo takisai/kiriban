@@ -1,0 +1,42 @@
+<!--
+Copyright (c) 2020 takisai
+Released under the MIT license
+https://opensource.org/licenses/mit-license.php
+-->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>キリ番サーチ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>キリ番サーチ</h1>
+        <form name="input">
+            検索範囲: <input type="text" id="number_begin" name="number_begin" autocomplete="off" class="background-color_pink"> ～ <input type="text" id="number_end" name="number_end" autocomplete="off" class="background-color_pink"><br>
+            桁数範囲: <input type="text" id="digit_begin" name="digit_begin" autocomplete="off" value="3"> ～ <input type="text" id="digit_end" name="digit_end" autocomplete="off"><br>
+            基数範囲: <input type="text" id="base_begin" name="base_begin" autocomplete="off" value="2"> ～ <input type="text" id="base_end" name="base_end" autocomplete="off"><br>
+            種別:
+            <div class="indent">
+                <input type="checkbox" name="is_pure1" checked> 先頭1桁以外全部0 (ex. 20000)
+                <div class="indent">
+                    <input type="text" id="pure2" name="pure2" autocomplete="off"> 桁以上の場合は先頭2桁以外全部0の数字も含む (ex. 36000)<br>
+                    (※指定なしで先頭2桁以外全部0の数字は含まない)
+                </div>
+                <input type="checkbox" name="is_repdigit" checked> 同じ数字の連続 (ex. 44444)<br>
+                <input type="checkbox" name="is_seqdigit"> 1から始まる連番 (ex. 12345)
+            </div>
+            <input type="button" value="検索" onclick="send()">
+        </form>
+        <hr>
+        <ul id="result">
+        </ul>
+        <hr>
+        <h2>キリ番とは</h2>
+        <a href="https://www.google.co.jp/search?q=%E3%82%AD%E3%83%AA%E7%95%AA" target="_blank">キリ番 - Google 検索</a>
+        <h2>検索結果の読み方</h2>
+        <p>等号の左側の数値は十進法で、右側の数値は別の基数による表現です。「&lt;12&gt;&lt;0&gt;&lt;0&gt;<sub>16</sub>」は「十六進法で十二を表す文字の次に、零を表す数値が2つ並ぶ」ことを表しています(いわゆる「C00<sub>16</sub>」)。</p>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+/*
+Copyright (c) 2020 takisai
+Released under the MIT license
+https://opensource.org/licenses/mit-license.php
+*/
+
+:root {
+    --lightpink: #ffcabf;
+    --white: white;
+}
+
+li > ul {
+    list-style-type: none;
+}
+
+.indent {
+    padding-left: 1em;
+}
+
+.background-color_white {
+    background-color: var(--white);
+}
+
+.background-color_pink {
+    background-color: var(--lightpink);
+}
