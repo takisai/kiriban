@@ -13,6 +13,10 @@ li > ul {
     list-style-type: none;
 }
 
+input[type=text] {
+    width: 8em;
+}
+
 .indent {
     padding-left: 1em;
 }
