@@ -123,6 +123,9 @@ const send = () => {
     for(let i = numBegin; i <= numEnd; i++) { // i :: NaturalNumber
         check(i);
     }
+    if(dgebi('result').innerHTML === '') {
+        dgebi('result').innerHTML = '見つかりませんでした';
+    }
 };
 
 // formCheck :: Bool -> Object -> ()
